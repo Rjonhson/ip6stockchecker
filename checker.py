@@ -10,10 +10,10 @@ class CheckerHandler(webapp2.RequestHandler):
         logging.info("Checker is being invoked")
 
         logging.debug("Requesting remote URL")
-        response = urllib2.urlopen('http://store.apple.com/sg/buyFlowSelectionSummary/IPHONE6?node=home/'
-                                   'shop_iphone/family/iphone6&step=select&option.dimensionScreensize=4_7inch&'
-                                   'option.dimensionColor=gold&option.dimensionCapacity=16gb&'
-                                   'option.carrierModel=UNLOCKED%2FWW&carrierPolicyType=UNLOCKED')
+        response = urllib2.urlopen('http://store.apple.com/us/buyFlowSelectionSummary/IPHONE6P_UNLOCKED?node=home/'
+                                   'shop_iphone/family/iphone6&step=select&option.dimensionScreensize=5_5inch&'
+                                   'option.dimensionColor=space_gray&option.dimensionCapacity=16gb&'
+                                   'cppart=TMOBILE%2FUS&carrierPolicyType=UNLOCKED')
 
         logging.debug("Parsing json")
         result = json.load(response)
